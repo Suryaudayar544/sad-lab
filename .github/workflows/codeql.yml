@@ -1,0 +1,18 @@
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron: '0 0 * * 0'   # weekly
+  workflow_dispatch:       # enables manual run
+
+# You can add jobs here if not already present.
+# For example:
+# jobs:
+#   analyze:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Run CodeQL Analysis
+#         uses: github/codeql-action/analyze@v2
